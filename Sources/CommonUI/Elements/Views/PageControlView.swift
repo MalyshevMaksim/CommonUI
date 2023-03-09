@@ -1,6 +1,6 @@
 import UIKit
 
-final class PageControlView: UIView {
+public final class PageControlView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -11,17 +11,17 @@ final class PageControlView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         setNeedsDisplay()
     }
 
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         guard numberOfPages > 0 else { return }
         drawDots(rect: rect)
     }
 
-    override var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         let distanceBetweenDots = CGFloat(numberOfPages - 1) * appearance.gapSize
         let dots = CGFloat(numberOfPages) * appearance.dotRadius * 2
         let width = dots + distanceBetweenDots + appearance.currentDotBorderWidth * 2
@@ -29,15 +29,15 @@ final class PageControlView: UIView {
         return CGSize(width: width, height: height)
     }
 
-    var appearance = Appearance() {
+    public var appearance = Appearance() {
         didSet { setNeedsLayout() }
     }
 
-    var numberOfPages: Int = 0 {
+    public var numberOfPages: Int = 0 {
         didSet { setNeedsLayout() }
     }
 
-    var currentPage: Int = 0 {
+    public var currentPage: Int = 0 {
         didSet { setNeedsLayout() }
     }
 
@@ -67,7 +67,7 @@ final class PageControlView: UIView {
     }
 }
 
-extension PageControlView {
+public extension PageControlView {
 
     struct Appearance {
         let color: UIColor = .systemBlue
