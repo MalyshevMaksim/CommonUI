@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by m.malyshev on 09.03.2023.
-//
-
 import UIKit
 
 public class ShimeringButton: UIButton {
