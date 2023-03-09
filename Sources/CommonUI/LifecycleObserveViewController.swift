@@ -1,6 +1,6 @@
 import UIKit
 
-open class LifecycleObservViewController: UIViewController {
+open class LifecycleObserveViewController: UIViewController {
 
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

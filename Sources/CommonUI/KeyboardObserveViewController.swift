@@ -1,6 +1,6 @@
 import UIKit
 
-open class KeyboardObservViewController: UIViewController {
+open class KeyboardObserveViewController: UIViewController {
 
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
