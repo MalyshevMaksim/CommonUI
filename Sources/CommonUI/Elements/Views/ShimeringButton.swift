@@ -1,8 +1,8 @@
 import UIKit
 
-public class ShimeringButton: UIButton {
+open class ShimeringButton: UIButton {
     
-    public func startShimmeringAnimation() {
+    open func startShimmeringAnimation() {
         let snapshot = self.snapshot?.withRenderingMode(.alwaysTemplate)
         let imageView = UIImageView(image: snapshot)
         imageView.frame = frame
@@ -41,7 +41,7 @@ public class ShimeringButton: UIButton {
         gradientLayer.add(animation, forKey: "shine")
     }
 
-    public func stopShimmeringAnimation() {
+    open func stopShimmeringAnimation() {
         layer.sublayers?.forEach {
             $0.mask?.removeAnimation(forKey: "shine")
         }
