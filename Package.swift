@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "CommonUI",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "CommonUI",
@@ -13,6 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.1.3"),
+        .package(url: "https://github.com/amirdew/CollectionViewPagingLayout.git", from: "1.1.0")
     ],
     targets: [
         .target(
